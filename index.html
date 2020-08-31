@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com -->
-  <title>Bootstrap Theme Company Page</title>
+  <title>Hotel Website</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -205,7 +205,7 @@
 
 .container1 img {vertical-align: middle;}
 
-.container1 .content1 {
+.container1 .content1{
   position: absolute;
   bottom: 0;
   background: rgb(0, 0, 0); /* Fallback color */
@@ -213,18 +213,13 @@
   color: #f1f1f1;
   width: 100%;
   height:100%;
-  padding: 20%;
+  padding: 10%;
 
 }
 
 .input-group{
   width:50%;
 }
-
-
-
-
-
 
 .carousel-inner img {
     -webkit-filter: grayscale(90%);
@@ -281,6 +276,11 @@
     background: #2d2d30;
     color: #bdbdbd;
   }
+.bg-2 {
+    background: #2d2d30;
+    color: #bdbdbd;
+    width:100%;
+  }
   .bg-1 h31 {color: #fff;}
   .bg-1 p1 {font-style: italic;}
   .list-group-item:first-child {
@@ -335,6 +335,12 @@
     
         .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
 /***************************************************************************************************************************/
+#more {display: none;}
+
+hr.new1 {
+  border-top: 1px solid white;
+}
+
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -351,13 +357,13 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#food">RESTAURANTS AND BAR</a></li>
+        <li><a href="#about">OVERVIEW</a></li>
+        <li><a href="#food">RESTAURANTS & BAR</a></li>
         <li><a href="#rooms">ROOMS</a></li>
-        <li><a href="#meetings">MEETINGS AND EVENTS</a></li>
+        <li><a href="#meetings">MEETINGS & EVENTS</a></li>
         <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#reviews">REVIEWS</a></li>
         <li><a href="#contact">CONTACT</a></li>
-        <li><a href="#revies">REVIEWS</a></li>
       </ul>
     </div>
   </div>
@@ -384,30 +390,77 @@
 <div class="container1">
   <img src="pexels-alexy-almond-3756523.jpg" alt="Notebook" style="width:100%; height:100%; allign:center">
   <div class="content1">
-  <center>
-  <h1>Minakshi Palace</h1>
-  <p>We specialize in blablabla</p> 
-  
-  <form>
-    <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Subscribe</button>
+	  <center>
+		  <h1>Minakshi Palace</h1>
+		  <p>We specialize in blablabla</p> 
+		  
+		  <form>
+		    <div class="input-group">
+		      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+		      <div class="input-group-btn">
+			<button type="button" class="btn btn-danger">Subscribe</button>
+		      </div>
+		    </div>
+		  </form>
+	  <center>
+	  <h1>Heading</h1>
+	  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+
+<center>
+  <div class="container bg-2">
+     <div class="row">
+        <h3>Check Availability</h3>
+     </div>
+     <form>
+     <div class="row">
+     <div class="col-sm-3"> 
+		<div class="form-group">
+		    <label for="checkin">Check-in:</label>
+		    <input type="date" class="form-control" id="checkin">
+		</div>
+     </div>
+     <div class="col-sm-3"> 
+		<div class="form-group">
+		    <label for="checkout">Check-out:</label>
+		    <input type="date" class="form-control" id="checkout">
+		</div>
+     </div>
+     <div class="col-sm-2"> 
+		<div class="form-group">
+		    <label for="checkin">Occupacy</label>
+		    <input type="number" class="form-control" id="checkin">
+		</div>
+     </div>
+     <div class="col-sm-2"> 
+		<div class="form-group">
+		    <label for="checkin">Special Rates:</label>
+		    <select class="form-control" name="rates" id="rates">
+			  <option value="Low Rate">Low Rate</option>
+			  <option value="Medium Rate">Medium Rate</option>
+			  <option value="High Rate">High Rate</option>
+
+		   </select>
+		</div>
+     </div>
+     <div class="col-sm-2"> 
+		<div class="form-group">
+		    <label for="checkin">  </label>
+		    <input type="button" value="Check Availability" class="btn btn-primary" id="checkin">
+		</div>
       </div>
-    </div>
-  </form>
-  <center>
-    <h1>Heading</h1>
-    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
-
+      </div>
+      </form>
   </div>
+  <center>
+
+
+
+  </div><!--end of content on img -->
 </div>
 </div>
+<!-- home end-->
 
-
-
-
-
+ 
 
 
 
@@ -540,32 +593,33 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
       <div class="col-sm-4">
         <div class="thumbnail">
           <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Paris" width="400" height="300">
-          <p><strong>Paris</strong></p>
+          <p><strong>Starters</strong></p>
           <p>Friday 27 November 2015</p>
-          <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+          <button class="btn1" data-toggle="modal" data-target="#myModal">View</button>
         </div>
       </div>
 
       <div class="col-sm-4">
         <div class="thumbnail">
           <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="New York" width="400" height="300">
-          <p><strong>New York</strong></p>
+          <p><strong>Main Course</strong></p>
           <p>Saturday 28 November 2015</p>
-          <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+          <button class="btn1" data-toggle="modal" data-target="#myModal">View</button>
         </div>
       </div>
 
       <div class="col-sm-4">
         <div class="thumbnail">
           <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="San Francisco" width="400" height="300">
-          <p><strong>San Francisco</strong></p>
+          <p><strong>Deserts</strong></p>
           <p>Sunday 29 November 2015</p>
-          <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+          <button class="btn1" data-toggle="modal" data-target="#myModal">View</button>
         </div>
       </div>
 
     </div>
-
+        <!--Book table-->
+	<center><button class="btn btn-danger btn-alert"data-toggle="modal" data-target="#myModal"><h1>Book Table</h1></button></center>
   </div>
   
   <!-- Modal -->
@@ -606,16 +660,24 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
 
 
 
+
 	
+
 
 
 
 <!-- Container (Portfolio Section) -->
 <!-- ##################################################   room cards   ###################################------------>
 
-<div id="rooms" class="container-fluid bg-1">
+<div id="rooms" class="container-fluid text-center">
+<hr class="">
 	<div class="row">
-    <h3 class="text-center">Rooms</h3>
+    <h2 class="text-center">Rooms</h2>
+	<h3> Our Cavelossim Beach hotel rooms overlook the gardens and pool</h3>
+	<p>Each of the 132 colorful hotel rooms and suites at the Radisson Blu Resort Goa Cavelossim Beach features serene views of our manicured gardens and sparkling pool. After a day at the beach, you can wash away the sand and salt under the rain shower in your modern bathroom, and then relax on a plush mattress while enjoying a meal from room service. Watch your favorite shows on the flat-screen TV or upload photos using free Wi-Fi. Upgrade to a suite and enjoy the extra space in your separate living room, ideal for entertaining friends.
+</p>
+</div>
+	<div id="" class="container-fluid bg-1">
 		<div class="MultiCarousel" data-items="1,3,3,3" data-slide="1" id="MultiCarousel"  data-interval="1000">
             <div class="MultiCarousel-inner">
 			    <div class="row text-center">
@@ -623,8 +685,18 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
 			     <div class="col-sm-4 item">
 				<div class="thumbnail">
 				  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Paris" width="400" height="300">
-				  <p><strong>Paris</strong></p>
-				  <p>Friday 27 November 2015</p>
+				  <p><strong>Superior Room</strong></p>
+				  <p><span class="glyphicon glyphicon-move" aria-hidden="true"></span>size: 344 ft² max. | 
+				     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>guests: 3 adults</p>
+
+				     <div class="row">
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+					</br></br>
+				      </div>
 				  <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
 				</div>
 			      </div>
@@ -632,8 +704,19 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
 			     <div class="col-sm-4 item">
 				<div class="thumbnail">
 				  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Paris" width="400" height="300">
-				  <p><strong>Paris</strong></p>
-				  <p>Friday 27 November 2015</p>
+				  <p><strong>Deluxe Room</strong></p>
+				  <p><span class="glyphicon glyphicon-move" aria-hidden="true"></span>size: 367 ft² max. | 
+				     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>guests: 3 adults</p>
+
+				     <div class="row">
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+					</br></br>
+				      </div>
+
 				  <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
 				</div>
 			      </div>
@@ -641,8 +724,18 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
 			     <div class="col-sm-4 item">
 				<div class="thumbnail">
 				  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Paris" width="400" height="300">
-				  <p><strong>Paris</strong></p>
-				  <p>Friday 27 November 2015</p>
+				  <p><strong>Business Class Room</strong></p>
+				  <p><span class="glyphicon glyphicon-move" aria-hidden="true"></span>size: 367 ft² max. | 
+				     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>guests: 3 adults</p>
+
+				     <div class="row">
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+					</br></br>
+				      </div>
 				  <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
 				</div>
 			      </div>
@@ -650,8 +743,18 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
 			     <div class="col-sm-4 item">
 				<div class="thumbnail">
 				  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Paris" width="400" height="300">
-				  <p><strong>Paris</strong></p>
-				  <p>Friday 27 November 2015</p>
+				  <p><strong>Suite</strong></p>
+				  <p><span class="glyphicon glyphicon-move" aria-hidden="true"></span>size: 656 ft² max. | 
+				     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>guests: 3 adults</p>
+
+				     <div class="row">
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+					</br></br>
+				      </div>
 				  <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
 				</div>
 			      </div>
@@ -659,20 +762,23 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
 			     <div class="col-sm-4 item">
 				<div class="thumbnail">
 				  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Paris" width="400" height="300">
-				  <p><strong>Paris</strong></p>
-				  <p>Friday 27 November 2015</p>
+				  <p><strong>One-bedroom Suite</strong></p>
+				  <p><span class="glyphicon glyphicon-move" aria-hidden="true"></span>size: 742 ft² max. | 
+				     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>guests: 3 adults</p>
+
+				     <div class="row">
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+					</br></br>
+				      </div>
 				  <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
 				</div>
 			      </div>
 
-			     <div class="col-sm-4 item">
-				<div class="thumbnail">
-				  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Paris" width="400" height="300">
-				  <p><strong>Paris</strong></p>
-				  <p>Friday 27 November 2015</p>
-				  <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
-				</div>
-			      </div>
+			     
 
 				<!--
 				<div class="item">
@@ -683,38 +789,8 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
 				        <p>50% off</p>
 				    </div>
 				</div>
-				<div class="item">
-				    <div class="pad15">
-				        <p class="lead">Multi Item Carousel</p>
-				        <p>₹ 1</p>
-				        <p>₹ 6000</p>
-				        <p>50% off</p>
-				    </div>
-				</div>
-				<div class="item">
-				    <div class="pad15">
-				        <p class="lead">Multi Item Carousel</p>
-				        <p>₹ 1</p>
-				        <p>₹ 6000</p>
-				        <p>50% off</p>
-				    </div>
-				</div>
-				<div class="item">
-				    <div class="pad15">
-				        <p class="lead">Multi Item Carousel</p>
-				        <p>₹ 1</p>
-				        <p>₹ 6000</p>
-				        <p>50% off</p>
-				    </div>
-				</div>
-				<div class="item">
-				    <div class="pad15">
-				        <p class="lead">Multi Item Carousel</p>
-				        <p>₹ 1</p>
-				        <p>₹ 6000</p>
-				        <p>50% off</p>
-				    </div>
-				</div>     -->
+				
+				  -->
 				</div>
 				
             </div>
@@ -723,8 +799,11 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
             <button class="btn btn-primary rightLst">></button>
 	               
         </div>
+	<!--Book now-->
+	<center><button class="btn btn-danger btn-alert"data-toggle="modal" data-target="#myModal"><h1>Book Now</h1></button></center>
 	</div>
 </div>
+
 
 
 
@@ -775,16 +854,19 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
 
 
 <!-- ##################################################  MEETINGS AND EVENTS    ###################################------------>
-<!-- Container (About Section) -->
+<!-- Container (About Section) --><!--
 <div id="meetings" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
       <h2>MEETINGS AND EVENTS </h2><br>
       <h4> Host a destination wedding at our Cavelossim Beach event venues</h4><br>
-      <p>Located only 45 minutes from the GOI airport and a short walk from splendid local beaches, the Radisson Blu Resort Goa Cavelossim Beach offers a unique setting against the backdrop of Goan-Portuguese architecture. Ideal for elegant weddings and special occasions, our 850-square-meter covered banquet halls can be decorated to match your theme and color scheme, and our extensive lawns are able to accommodate up to 750 attendees. For a memorable event, coordinate with our skilled catering staff to create a personalized menu featuring cuisine from across the globe. If you're planning a multimedia presentation, our venue offers a range of audiovisual solutions.</p>
+      <p>Located only 45 minutes from the GOI airport and a short walk from splendid local beaches, the Radisson Blu Resort Goa Cavelossim Beach offers a unique setting against the backdrop of Goan-Portuguese architecture. <span id="dots">...</span><span id="more">Ideal for elegant weddings and special occasions, our 850-square-meter covered banquet halls can be decorated to match your theme and color scheme, and our extensive lawns are able to accommodate up to 750 attendees. For a memorable event, coordinate with our skilled catering staff to create a personalized menu featuring cuisine from across the globe. If you're planning a multimedia presentation, our venue offers a range of audiovisual solutions.</p>
+<a id ="myBtn" onclick="viewmoreFunction()"  >Read more</a>
+
       <br><button class="btn btn-default btn-lg">Request a Proposal</button>
       <h4>Meetings</h4><br>
-      <p>Combining custom catering with elegant banquet halls and expansive outdoor space, our hotel is the perfect spot for hosting meetings and events in Goa. Our professional staff can assist you in planning the details—from guest arrivals and room bookings to a departure brunch—you can be confident that your gathering will be just as you envisioned.</p>
+      <p>Combining custom catering with elegant banquet halls and expansive outdoor space, our hotel is the perfect spot for hosting meetings and events in Goa.Our professional staff can assist you in planning the details—from guest arrivals and room bookings to a departure brunch—you can be confident that your gathering will be just as you envisioned.</p>
+
 	<h4>Venue Options</h4>
 	<ul>
 		<li>850 square meters of covered banquet halls</li>
@@ -797,7 +879,9 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
     </div>
     <div class="col-sm-4">
       <div class="row">
-        <!--<span class="glyphicon glyphicon-signal logo"></span>-->
+        <img src="pexels-alexy-almond-3756523.jpg" alt="Chicago" style="width:100%; height:50%; margine:10px; padding:10px">
+      </div>
+      <div class="row">
         <img src="pexels-alexy-almond-3756523.jpg" alt="Chicago" style="width:100%; height:50%; margine:10px; padding:10px">
       </div>
       <div class="row">
@@ -805,7 +889,53 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
       </div>
     </div>
   </div>
-</div>
+</div>-->
+
+<div id="meetings" class="container-fluid">
+    <center><h2>MEETINGS AND EVENTS </h2></center><br>
+  <div class="row">
+    <div class="col-sm-8">
+
+      <h4> Host a destination wedding at our Cavelossim Beach event venues</h4><br>
+      <p>Located only 45 minutes from the GOI airport and a short walk from splendid local beaches, the Radisson Blu Resort Goa Cavelossim Beach offers a unique setting against the backdrop of Goan-Portuguese architecture. <span id="dots">...</span><span id="more">Ideal for elegant weddings and special occasions, our 850-square-meter covered banquet halls can be decorated to match your theme and color scheme, and our extensive lawns are able to accommodate up to 750 attendees. For a memorable event, coordinate with our skilled catering staff to create a personalized menu featuring cuisine from across the globe. If you're planning a multimedia presentation, our venue offers a range of audiovisual solutions.</p>
+<a id ="myBtn" onclick="viewmoreFunction()"  >Read more</a>
+
+      <br><button class="btn btn-default btn-lg">Request a Proposal</button>
+      </div>
+    <div class="col-sm-4">
+        <img src="pexels-alexy-almond-3756523.jpg" alt="Chicago" style="width:100%; height:50%; margine:10px; padding:10px">
+    </div>
+  </div>
+
+<div class="row">
+    <div class="col-sm-4">
+              <img src="pexels-alexy-almond-3756523.jpg" alt="Chicago" style="width:100%; height:50%; margine:10px; padding:10px">
+    </div>
+    <div class="col-sm-8">
+
+      <h4>Meetings</h4><br>
+      <p>Combining custom catering with elegant banquet halls and expansive outdoor space, our hotel is the perfect spot for hosting meetings and events in Goa.Our professional staff can assist you in planning the details—from guest arrivals and room bookings to a departure brunch—you can be confident that your gathering will be just as you envisioned.</p>
+      </div>   
+  </div>
+
+<div class="row">
+    <div class="col-sm-8">
+
+<h4>Venue Options</h4>
+	<ul>
+		<li>850 square meters of covered banquet halls</li>
+		<li>3,000 square meters of open lawn space, able to accommodate up to 750 guests</li>
+		<li>Executive boardroom with 10 seats</li>
+		<li>Mini-conference area</li>
+		<li>Pre-function area</li>
+	</ul>
+      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+      </div>   
+    <div class="col-sm-4">
+              <img src="pexels-alexy-almond-3756523.jpg" alt="Chicago" style="width:100%; height:50%; margine:10px; padding:10px">
+    </div>
+  </div>
+
 <!-- ##################################################   Key Features   ###################################------------>
 <!-- Container (Services Section) -->
 <div id="features" class="container-fluid text-center">
@@ -917,6 +1047,7 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
 </div>
 
 <!-- ##################################################   Reviews   ###################################------------>
+<div id="reviews" class="container-fluid">
   <center><h2>What our customers say</h2></center>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->
@@ -949,6 +1080,7 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
       <span class="sr-only">Next</span>
     </a>
   </div>
+</div>
 </div>
 
 
@@ -984,13 +1116,44 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
 </div>
 
 <!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+<img src="imgs/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
 <footer class="container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Contact Hotels</h3>
+      <button>Contact Us</button>
+    </div>
+    <div class="col-sm-4">
+      <h3>Follow us on social media </h3>
+      <div class="row">
+          <img src="imgs/twitter.webp"width="20px"height="20px">
+        <img src="imgs/linkedin.webp"width="20px"height="20px">
+        <img src="imgs/insta.webp"width="20px"height="20px">
+        <img src="imgs/facebook.webp"width="20px"height="20px">
+        <img src="imgs/whatsapp.webp"width="20px"height="20px"></br></br>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <h3>Never miss out on our most popular deals</h3><br>
+      <center>
+      <form>
+            <div class="row">
+	    <div class="input-group">
+	      <input type="email" class="form-control" size="100%" placeholder="Email Address" style="" required>
+	      <div class="input-group-btn">
+		<button type="button" class="btn btn-danger">Subscribe</button>
+	      </div>
+	    </div>
+            </div>
+     </form>
+     <center>
+    </div>
+  <div>
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+  <p>The Minakshi Palace <a href="" title="Visit us">Welcome</a></p>
 </footer>
 
 <script>
@@ -1167,6 +1330,22 @@ $(document).ready(function(){
 
 
 })
+function viewmoreFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
 </script>
 
 </body>
