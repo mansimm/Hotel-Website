@@ -148,6 +148,20 @@
     border-color: transparent;
     color: #fff !important;
   }
+
+.open .dropdown-toggle {
+    border-color: transparent;
+    color: #fff;
+    background-color: transparent !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;/*font color dropdown menu*/
+  }
+  .dropdown-menu li a:hover {
+    background-color: #f2f2f2 !important;
+  }
+
+
   footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
@@ -277,8 +291,8 @@
     color: #bdbdbd;
   }
 .bg-2 {
-    background: #2d2d30;
-    color: #bdbdbd;/*#f4511e*/
+    background: #f4511e;
+    color: white;/*#f4511e*/
     width:100%;
   }
   .bg-1 h31 {color: #fff;}
@@ -340,6 +354,32 @@
 hr.new1 {
   border-top: 1px solid white;
 }
+  /* Tooltip */
+  .test + .tooltip > .tooltip-inner {
+    background-color: #73AD21; 
+    color: #FFFFFF; 
+    border: 1px solid green; 
+    padding: 15px;
+    font-size: 20px;
+  }
+  /* Tooltip on top */
+  .test + .tooltip.top > .tooltip-arrow {
+    border-top: 5px solid green;
+  }
+  /* Tooltip on bottom */
+  .test + .tooltip.bottom > .tooltip-arrow {
+    border-bottom: 5px solid blue;
+  }
+  /* Tooltip on left */
+  .test + .tooltip.left > .tooltip-arrow {
+    border-left: 5px solid red;
+  }
+  /* Tooltip on right */
+  .test + .tooltip.right > .tooltip-arrow {
+    border-right: 5px solid black;
+  }
+
+
 
   </style>
 </head>
@@ -361,9 +401,19 @@ hr.new1 {
         <li><a href="#food">RESTAURANTS & BAR</a></li>
         <li><a href="#rooms">ROOMS</a></li>
         <li><a href="#meetings">MEETINGS & EVENTS</a></li>
-        <li><a href="#pricing">PRICING</a></li>
+        <!--<li><a href="#pricing">PRICING</a></li>-->
         <li><a href="#reviews">REVIEWS</a></li>
         <li><a href="#contact">CONTACT</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Portflio</a></li>
+            <li><a href="#">Nearby Attractions</a></li>
+            <li><a href="#">Help</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
       </ul>
     </div>
   </div>
@@ -444,8 +494,8 @@ hr.new1 {
      </div>
      <div class="col-sm-2"> 
 		<div class="form-group">
-		    <label for="checkin">  </label>
-		    <input type="button" value="Check Availability" class="btn btn-primary" id="checkin">
+		    <label for="checkin">  </label></br>
+		    <input type="button" value="Check Availability" class="btn btn-danger" id="checkin">
 		</div>
       </div>
       </div>
@@ -483,11 +533,10 @@ hr.new1 {
 <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
-      <h2>About </h2><br>
-      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p>Located 45 minutes from Goa International Airport (GOI) and featuring brightly colored architecture and lush gardens, the Radisson Blu Resort Goa Cavelossim Beach creates an atmosphere that invites relaxation. Just a 10-minute walk from the Arabian Sea, our hotel makes your Cavelossim Beach getaway a breeze.
-
-Our resort offers plenty of on-site water fun with two sparkling pools, including one just for kids. For more personalized attention while you unwind, take advantage of wellness treatments at Sohum Spa. After a day in the water, refuel at our three on-site restaurants or bar before heading to one of our 132 rooms and suites for the night. With nearly 4,000 square meters of meeting space, our hotel is also ideal for hosting an exotic destination wedding or an international conference.</p>
+      <h2>Overview </h2><br>
+      <h4> Relax at our serene resort hotel near Cavelossim Beach</h4><br>
+      <p>Located 45 minutes from Goa International Airport (GOI) and featuring brightly colored architecture and lush gardens, the Radisson Blu Resort Goa Cavelossim Beach creates an atmosphere that invites relaxation. Just a 10-minute walk from the Arabian Sea, our hotel makes your Cavelossim Beach getaway a breeze.</p>
+</p>Our resort offers plenty of on-site water fun with two sparkling pools, including one just for kids. For more personalized attention while you unwind, take advantage of wellness treatments at Sohum Spa. After a day in the water, refuel at our three on-site restaurants or bar before heading to one of our 132 rooms and suites for the night. With nearly 4,000 square meters of meeting space, our hotel is also ideal for hosting an exotic destination wedding or an international conference.</p>
       <br><button class="btn btn-default btn-lg">Get in Touch</button>
     </div>
     <div class="col-sm-4">
@@ -631,7 +680,7 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4 class="h41"><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+          <h4 class="h41"><span class="glyphicon glyphicon-lock"></span> Table Booking</h4>
         </div>
         <div class="modal-body">
           <form role="form">
@@ -698,7 +747,7 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
                                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
 					</br></br>
 				      </div>
-				  <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+				  <button class="btn1" data-toggle="modal" data-target="#myModal">View Details</button>
 				</div>
 			      </div>
 
@@ -718,7 +767,7 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
 					</br></br>
 				      </div>
 
-				  <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+				  <button class="btn1" data-toggle="modal" data-target="#myModal">View Details</button>
 				</div>
 			      </div>
 
@@ -737,7 +786,7 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
                                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
 					</br></br>
 				      </div>
-				  <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+				  <button class="btn1" data-toggle="modal" data-target="#myModal">View Details</button>
 				</div>
 			      </div>
 
@@ -756,7 +805,7 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
                                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
 					</br></br>
 				      </div>
-				  <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+				  <button class="btn1" data-toggle="modal" data-target="#myModal">View Details</button>
 				</div>
 			      </div>
 
@@ -775,7 +824,7 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
                                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
 					</br></br>
 				      </div>
-				  <button class="btn1" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+				  <button class="btn1" data-toggle="modal" data-target="#myModal">View Details</button>
 				</div>
 			      </div>
 
@@ -817,7 +866,9 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
   <div class="row slideanim">
     <div class="col-sm-4">
       <!--<span class="glyphicon glyphicon-off logo-small"></span>-->
+      <a class="test" data-toggle="tooltip" data-placement="right" title="Welcome to Bar!">
       <img src="imgs/icons8-bar-100.png" style="height:15%; width:15%;">
+      </a>
       <h4>BAR</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
@@ -1129,15 +1180,15 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
 </div>
 
 <!-- Image of location/map -->
-<img src="imgs/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+<img src="imgs/map.jpg" class="w3-image w3-greyscale-min slideanim" style="width:100%">
 
 <footer class="container-fluid text-center">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-4 slideanim">
       <h3>Contact Hotels</h3></br>
       <button class="btn btn-danger">Need Help?</button>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 slideanim">
       <h3>Follow us on social media </h3>
       <div class="row">
           <img src="imgs/twitter.webp"width="20px"height="20px">
@@ -1147,7 +1198,7 @@ Our resort offers plenty of on-site water fun with two sparkling pools, includin
         <img src="imgs/whatsapp.webp"width="20px"height="20px"></br></br>
       </div>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 slideanim">
       <h3>Never miss out on our most popular deals</h3><br>
       <center>
       <form>
@@ -1339,7 +1390,7 @@ $(document).ready(function(){
         ResCarousel(ell, Parent, slide);
     }
 
-
+   $('[data-toggle="tooltip"]').tooltip();   
 
 
 })
