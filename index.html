@@ -356,11 +356,11 @@ hr.new1 {
 }
   /* Tooltip */
   .test + .tooltip > .tooltip-inner {
-    background-color: #73AD21; 
-    color: #FFFFFF; 
-    border: 1px solid green; 
+    background-color: #f2f2f2; 
+    color: black; 
+    border: 1px solid black; 
     padding: 15px;
-    font-size: 20px;
+    font-size: 10px;
   }
   /* Tooltip on top */
   .test + .tooltip.top > .tooltip-arrow {
@@ -451,8 +451,93 @@ hr.new1 {
 			<button type="button" class="btn btn-danger">Subscribe</button>
 		      </div>
 		    </div>
+		  </form></br>
+                  <button class="" data-toggle="modal" data-target="#login" style="margin:10px">
+                  <a href="#">Login</a>
+                  </button> 
+                  <button class="" data-toggle="modal" data-target="#signup" style="margin:10px">
+                  <a href="#">Sign Up</a>
+                  </button>  
+
+	  </center>
+	  <!-- Modal login-->
+	  <div class="modal fade" id="login" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">×</button>
+		  <h4 class="h41"><span class="glyphicon glyphicon-user"></span> Login</h4>
+		</div>
+		<div class="modal-body">
+		  <form role="form">
+		    <div class="form-group">
+		      <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email Id</label>
+		      <input type="email" class="form-control" id="psw" placeholder="Enter Email Id">
+		    </div>
+		    <div class="form-group">
+		      <label for="psw"><span class="glyphicon glyphicon-lock"></span> Password</label>
+		      <input type="password" class="form-control" id="usrname" placeholder="Enter Password">
+		    </div>
+		      <button type="submit" class="btn btn-success">Login 
+		        <span class="glyphicon glyphicon-ok"></span>
+		      </button>
 		  </form>
-	  <center>
+		</div>
+		<div class="modal-footer">
+		  <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+		    <span class="glyphicon glyphicon-remove"></span> Cancel
+		  </button>
+		  <p><a href="#">Forgot password?</a></p>
+		</div>
+	      </div>
+	      <!-- Modal content end-->
+	    </div>
+	  </div>
+	 <!-- Modal end-->
+
+         <!-- Modal signup-->
+	  <div class="modal fade" id="signup" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+		<div class="modal-header"></br>
+		  <button type="button" class="close" data-dismiss="modal">×</button>
+		  <h4 class="h41"><span class="glyphicon glyphicon-user"></span> Sign Up</h4>
+		</div>
+		<div class="modal-body">
+		  <form role="form">
+		    <div class="form-group">
+		      <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email Id</label>
+		      <input type="email" class="form-control" id="usrname" placeholder="Enter Email Id">
+		    </div>
+		    <div class="form-group">
+		      <label for="psw"><span class="glyphicon glyphicon-lock"></span> Password</label>
+		      <input type="password" class="form-control" id="psw" placeholder="Enter Password">
+		    </div>
+		    <div class="form-group">
+		      <label for="conpsw"><span class="glyphicon glyphicon-lock"></span> Confirm Password</label>
+		      <input type="password" class="form-control" id="conpsw" placeholder="Enter Confirm Password">
+		    </div>
+		      <button type="submit" class="btn btn-success">Sign Up
+		        <span class="glyphicon glyphicon-ok"></span>
+		      </button>
+		  </form>
+		</div>
+		<div class="modal-footer">
+		  <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+		    <span class="glyphicon glyphicon-remove"></span> Cancel
+		  </button>
+		  <p style="color:black">Already have account <a href="#">Sign In?</a></p>
+		</div>
+	      </div>
+	      <!-- Modal content end-->
+	    </div>
+	  </div>
+	  <!-- Modal end-->
+<center>
 	  <h1>Heading</h1>
 	  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
 
@@ -586,24 +671,24 @@ hr.new1 {
         <div class="item active">
         <center><img src="imgs/rest4.jpeg" alt="Los Angeles" style="width:50%; height:50%"></center>
         <div class="carousel-caption">
-          <h3>Los Angeles</h3>
-          <p>LA is always so much fun!</p>
+          <h3>Restourant</h3>
+          <p>Delicious international and Indian cuisine!</p>
         </div>
       </div>
 
       <div class="item">
         <center><img src="imgs/bar1.jpeg" alt="Chicago" style="width:50%; height:50%"></center>
         <div class="carousel-caption">
-          <h3>Chicago</h3>
-          <p>Thank you, Chicago!</p>
+          <h3>Bar</h3>
+          <p>Enjoy live music and handcrafted cocktails!</p>
         </div>
       </div>
     
       <div class="item">
         <center><img src="imgs/bar2.jpeg" alt="New York" style="width:50%; height:50%"></center>
         <div class="carousel-caption">
-          <h3>New York</h3>
-          <p>We love the Big Apple!</p>
+          <h3>Aesthetic ambience</h3>
+          <p>Enjoy Yourself!</p>
         </div>
       </div>
  
@@ -641,7 +726,7 @@ hr.new1 {
     <div class="row text-center">
 
       <div class="col-sm-4">
-        <div class="thumbnail">
+        <div class="thumbnail slideanim">
           <img src="imgs/eggdish.jpeg" alt="Paris" width="400" height="300">
           <p><strong>Starters</strong></p>
           <p>Friday 27 November 2015</p>
@@ -650,7 +735,7 @@ hr.new1 {
       </div>
 
       <div class="col-sm-4">
-        <div class="thumbnail">
+        <div class="thumbnail slideanim">
           <img src="imgs/main2.jpeg" alt="New York" width="400" height="300">
           <p><strong>Main Course</strong></p>
           <p>Saturday 28 November 2015</p>
@@ -659,7 +744,7 @@ hr.new1 {
       </div>
 
       <div class="col-sm-4">
-        <div class="thumbnail">
+        <div class="thumbnail slideanim">
           <img src="imgs/cake2.jpeg" alt="San Francisco" width="400" height="300">
           <p><strong>Desserts</strong></p>
           <p>Sunday 29 November 2015</p>
@@ -874,13 +959,17 @@ hr.new1 {
     </div>
     <div class="col-sm-4">
       <!--<span class="glyphicon glyphicon-heart logo-small"></span>-->
+      <a class="test" data-toggle="tooltip" data-placement="right" title="BREAKFAST BUFFET">
       <img src="imgs/icons8-service-bell-100.png" style="height:15%; width:15%;">
+      </a>
       <h4>BREAKFAST BUFFET</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
     <div class="col-sm-4">
       <!--<span class="glyphicon glyphicon-lock logo-small"></span>-->
+      <a class="test" data-toggle="tooltip" data-placement="right" title="COST AVAILABLE">
       <img src="imgs/icons8-cost-100.png" style="height:15%; width:15%;">
+      </a>
       <h4>COST AVAILABLE</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
@@ -889,19 +978,25 @@ hr.new1 {
   <div class="row slideanim">
     <div class="col-sm-4">
       <!--<span class="glyphicon glyphicon-leaf logo-small"></span>-->
+      <a class="test" data-toggle="tooltip" data-placement="right" title="DRY CLEANING">
       <img src="imgs/icons8-dry-100.png" style="height:15%; width:15%;">
+      </a>
       <h4>DRY CLEANING</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
     <div class="col-sm-4">
       <!--<span class="glyphicon glyphicon-certificate logo-small"></span>-->
+      <a class="test" data-toggle="tooltip" data-placement="right" title="FITNESS CENTER">
       <img src="imgs/icons8-ez-curl-bar-100.png" style="height:15%; width:15%;">
+      </a>
       <h4>FITNESS CENTER</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
     <div class="col-sm-4">
       <!--<span class="glyphicon glyphicon-wrench logo-small"></span>-->
+      <a class="test" data-toggle="tooltip" data-placement="right" title="EXPRESS CHECK-OUT">
       <img src="imgs/icons8-hotel-check-out-100.png" style="height:15%; width:15%;">
+      </a>
       <h4 style="color:#303030;">EXPRESS CHECK-OUT</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
@@ -1003,19 +1098,25 @@ hr.new1 {
   <div class="row slideanim">
     <div class="col-sm-4">
       <!--<span class="glyphicon glyphicon-off logo-small"></span>-->
+      <a class="test" data-toggle="tooltip" data-placement="right" title="3 meeting room">
       <img src="imgs/icons8-meeting-room-100.png" style="height:15%; width:15%;">
+      </a>
       <h4>3 meeting room</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
     <div class="col-sm-4">
       <!--<span class="glyphicon glyphicon-heart logo-small"></span>-->
+      <a class="test" data-toggle="tooltip" data-placement="right" title="750 person max. capacity">
       <img src="imgs/icons8-safety-collection-place-100.png" style="height:15%; width:15%;">
+      </a>
       <h4>750 person max. capacity</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
     <div class="col-sm-4">
       <!--<span class="glyphicon glyphicon-lock logo-small"></span>-->
+      <a class="test" data-toggle="tooltip" data-placement="right" title="Catering service">
       <img src="imgs/icons8-service-bell-100.png" style="height:15%; width:15%;">
+      </a>
       <h4>Catering service</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
@@ -1024,19 +1125,25 @@ hr.new1 {
   <div class="row slideanim">
     <div class="col-sm-4">
       <!--<span class="glyphicon glyphicon-leaf logo-small"></span>-->
+      <a class="test" data-toggle="tooltip" data-placement="right" title="Free Wi-Fi">
       <img src="imgs/icons8-wi-fi-100.png" style="height:15%; width:15%;">
+      </a>
       <h4>Free Wi-Fi</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
     <div class="col-sm-4">
       <!--<span class="glyphicon glyphicon-certificate logo-small"></span>-->
+      <a class="test" data-toggle="tooltip" data-placement="right" title="Boardroom">
       <img src="imgs/icons8-financial-dynamic-presentation-100.png" style="height:15%; width:15%;">
+      </a>
       <h4>Boardroom</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
     <div class="col-sm-4">
       <!--<span class="glyphicon glyphicon-wrench logo-small"></span>-->
+      <a class="test" data-toggle="tooltip" data-placement="right" title="Reception">
       <img src="imgs/icons8-reception-100.png" style="height:15%; width:15%;">
+      </a>
       <h4 style="color:#303030;">Reception</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
