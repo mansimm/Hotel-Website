@@ -165,7 +165,7 @@
   footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
-    color: #f4511e;
+    color: white;/*#f4511e;*/
   }
   .slideanim {visibility:hidden;}
   .slide {
@@ -393,7 +393,9 @@ hr.new1 {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      <a class="navbar-brand" href="#myPage">  Logo
+	<!--<img src="imgs/BlueLotusMassageLogo.png" alt="logo" style="width:100%; height:100%;">-->
+      </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -439,6 +441,7 @@ hr.new1 {
 <div class="">
 <div class="container1">
   <img src="imgs/pexels-alexy-almond-3756523.jpg" alt="Notebook" style="width:100%; height:100%; allign:center">
+  <div class="row">
   <div class="content1">
 	  <center>
 		  <h1>Minakshi Palace</h1>
@@ -458,8 +461,8 @@ hr.new1 {
                   <button class="" data-toggle="modal" data-target="#signup" style="margin:10px">
                   <a href="#">Sign Up</a>
                   </button>  
-
 	  </center>
+
 	  <!-- Modal login-->
 	  <div class="modal fade" id="login" role="dialog">
 	    <div class="modal-dialog">
@@ -537,11 +540,12 @@ hr.new1 {
 	    </div>
 	  </div>
 	  <!-- Modal end-->
-<center>
-	  <h1>Heading</h1>
-	  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+  
 
-<center>
+	<center>
+		  <h1>Heading</h1>
+		  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+
   <div class="container bg-2">
      <div class="row">
         <h3>Check Availability</h3>
@@ -590,7 +594,7 @@ hr.new1 {
 
 
 
-  </div><!--end of content on img -->
+  </div><!--end of content on img --></div>
 </div>
 </div>
 <!-- home end-->
@@ -1258,6 +1262,7 @@ hr.new1 {
     </div>
     <div class="col-sm-7 slideanim">
       <div class="row">
+        <p><b>  Write us for any query or feedback</b></p>
         <div class="col-sm-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
@@ -1276,9 +1281,10 @@ hr.new1 {
 </div>
 
 <!-- Image of location/map -->
-<img src="imgs/map.jpg" class="w3-image w3-greyscale-min slideanim" style="width:100%">
+<!--<img src="imgs/map.jpg" class="w3-image w3-greyscale-min slideanim" style="width:100%">-->
 
-<footer class="container-fluid text-center">
+<!-- footer -->
+<footer class="container-fluid text-center bg-2">
   <div class="row">
     <div class="col-sm-4 slideanim">
       <h3>Contact Hotels</h3>
