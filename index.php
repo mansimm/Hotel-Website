@@ -11,375 +11,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+  <link rel="stylesheet" type="text/css" href="css_file.css">
+  <script src="myScript.js"></script> 
+  <script type= "text/javascript" src="countries.js"></script>
+
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">-->
   <style>
-  body {
-    font: 400 15px Lato, sans-serif;
-    line-height: 1.8;
-    color: #818181;
-  }
-  h2 {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #303030;
-    font-weight: 600;
-    margin-bottom: 30px;
-  }
-  h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    color: #303030;
-    font-weight: 400;
-    margin-bottom: 30px;
-  }  
-  .jumbotron {
-    background-color: #f4511e;
-    color: #fff;
-    padding: 100px 25px;
-    font-family: Montserrat, sans-serif;
-  }
-.jumbotronimg {
-    background-color: #f4511e;
-    color: #fff;
-    padding: 0px 0px;
-    font-family: Montserrat, sans-serif;
-  }
-  .container-fluid {
-    padding: 60px 50px;
-  }
-  .bg-grey {
-    background-color: #f6f6f6;
-  }
-  .logo-small {
-    color: #f4511e;
-    font-size: 50px;
-  }
-  .logo {
-    color: #f4511e;
-    font-size: 200px;
-  }
-  .thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-  }
-  .thumbnail img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 10px;
-  }
-  .carousel-control.right, .carousel-control.left {
-    background-image: none;
-    color: #f4511e;
-  }
-  .carousel-indicators li {
-    border-color: #f4511e;
-  }
-  .carousel-indicators li.active {
-    background-color: #f4511e;
-  }
-  .item h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    font-weight: 400;
-    font-style: italic;
-    margin: 70px 0;
-  }
-  .item span {
-    font-style: normal;
-  }
-  .panel {
-    border: 1px solid #f4511e; 
-    border-radius:0 !important;
-    transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-    border: 1px solid #f4511e;
-    background-color: #fff !important;
-    color: #f4511e;
-  }
-  .panel-heading {
-    color: #fff !important;
-    background-color: #f4511e !important;
-    padding: 25px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-    background-color: white !important;
-  }
-  .panel-footer h3 {
-    font-size: 32px;
-  }
-  .panel-footer h4 {
-    color: #aaa;
-    font-size: 14px;
-  }
-  .panel-footer .btn {
-    margin: 15px 0;
-    background-color: #f4511e;
-    color: #fff;
-  }
-  .navbar {
-    margin-bottom: 0;
-    background-color: #f4511e;
-    z-index: 9999;
-    border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
-    border-radius: 0;
-    font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #f4511e !important;
-    background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff !important;
-  }
-
-.open .dropdown-toggle {
-    border-color: transparent;
-    color: #fff;
-    background-color: transparent !important;
-  }
-  .dropdown-menu li a {
-    color: #000 !important;/*font color dropdown menu*/
-  }
-  .dropdown-menu li a:hover {
-    background-color: #f2f2f2 !important;
-  }
-
-
-  footer .glyphicon {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: white;/*#f4511e;*/
-  }
-  .slideanim {visibility:hidden;}
-  .slide {
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    visibility: visible;
-  }
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-      width: 100%;
-      margin-bottom: 35px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-      font-size: 150px;
-    }
-  }
-
-.container1 {
-  position: relative;
-  max-width: 100%;
-  margin: 0 ;
-}
-
-.container1 img {vertical-align: middle;}
-
-.container1 .content1{
-  position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1;
-  width: 100%;
-  height:100%;
-  padding: 10%;
-
-}
-
-.input-group{
-  width:50%;
-}
-
-.carousel-inner img {
-    /*-webkit-filter: grayscale(90%);
-    filter: grayscale(90%);  make all photos black and white */ 
-    width: 100%; /* Set width to 100% */
-    margin: auto;
-  }
-  .carousel-caption h3 {
-    color: #fff !important;
-  }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-  padding: 0px;
-
-}
-
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-}
-
-
-
-.container {
-  padding: 0 16px;
-}
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.title {
-  color: grey;
-}
-
-/**********************************************************model*/
-
-.bg-1 {
-    background: #2d2d30;
-    color: #bdbdbd;
-  }
-.bg-2 {
-    background: #f4511e;
-    color: white;/*#f4511e*/
-    width:100%;
-  }
-  .bg-1 h31 {color: #fff;}
-  .bg-1 p1 {font-style: italic;}
-  .list-group-item:first-child {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-  }
-  .list-group-item:last-child {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-  }
-  .thumbnail p {
-    margin-top: 15px;
-    color: #555;
-  }
-  .btn1 {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #f1f1f1;
-    border-radius: 0;
-    transition: .2s;
-  }
-  .btn1:hover, .btn1:focus {
-    border: 1px solid #333;
-    background-color: #fff;
-    color: #000;
-  }
-  .modal-header, .h41, .close {
-    background-color: #333;
-    color: #fff !important;
-    text-align: center;
-    font-size: 30px;
-  }
-  .modal-header, .modal-body {
-    padding: 40px 50px;
-  }
-.leftLst .rightLst{
-
-}
-/******************************************* try ***********************/
-.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
-    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
-        .MultiCarousel .MultiCarousel-inner .item { float: left;}
-        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
-    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
-    .MultiCarousel .leftLst { left:0; }
-    .MultiCarousel .rightLst { right:0; }
-    
-        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
-/***************************************************************************************************************************/
-#more {display: none;}
-
-hr.new1 {
-  border-top: 1px solid white;
-}
-  /* Tooltip */
-  .test + .tooltip > .tooltip-inner {
-    background-color: #f2f2f2; 
-    color: black; 
-    border: 1px solid black; 
-    padding: 15px;
-    font-size: 10px;
-  }
-  /* Tooltip on top */
-  .test + .tooltip.top > .tooltip-arrow {
-    border-top: 5px solid green;
-  }
-  /* Tooltip on bottom */
-  .test + .tooltip.bottom > .tooltip-arrow {
-    border-bottom: 5px solid blue;
-  }
-  /* Tooltip on left */
-  .test + .tooltip.left > .tooltip-arrow {
-    border-left: 5px solid red;
-  }
-  /* Tooltip on right */
-  .test + .tooltip.right > .tooltip-arrow {
-    border-right: 5px solid black;
-  }
-
-
 
   </style>
 </head>
@@ -406,6 +43,7 @@ hr.new1 {
         <!--<li><a href="#pricing">PRICING</a></li>-->
         <li><a href="#reviews">REVIEWS</a></li>
         <li><a href="#contact">CONTACT</a></li>
+
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
           <span class="caret"></span></a>
@@ -415,7 +53,19 @@ hr.new1 {
             <li><a href="#">Help</a></li> 
           </ul>
         </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#login-modal" data-toggle="modal" data-target="#login-modal"> Login Here</a></li>
+            <li><a href="#signup-modal" data-toggle="modal" data-target="#signup-modal"> Sign Up Here</a></li>
+            <li><a href="#"> <div id="login"><button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#login-modal"style="margin:10px">Login Here</button></div></a></li>
+            <li><a href="#"><div id="signup"><button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#signup-modal"style="margin:10px">Sign Up Here</button></div></a></li>
+          </ul>
+        </li>
+
+        <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>-->
       </ul>
     </div>
   </div>
@@ -447,103 +97,140 @@ hr.new1 {
 		  <h1>Minakshi Palace</h1>
 		  <p>We specialize in blablabla</p> 
 		  
-		  <form>
+		  <form id="subscribe" action="subscribe.php" method="post">
 		    <div class="input-group">
-		      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+		      <input type="email" class="form-control" size="50" placeholder="Search" required>
 		      <div class="input-group-btn">
-			<button type="button" class="btn btn-danger">Subscribe</button>
+			<button type="submit" class="btn btn-danger" ><span class="glyphicon glyphicon-search"></span> Search</button>
 		      </div>
 		    </div>
 		  </form></br>
-                  <button class="" data-toggle="modal" data-target="#login" style="margin:10px">
-                  <a href="#">Login</a>
-                  </button> 
-                  <button class="" data-toggle="modal" data-target="#signup" style="margin:10px">
-                  <a href="#">Sign Up</a>
-                  </button>  
+
+		  <!--
+		  <div id="login"><button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#login-modal"style="margin:10px">Login Here</button></div>
+                  <div id="signup"><button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#signup-modal"style="margin:10px">Sign Up Here</button></div>
+                  -->
 	  </center>
 
-	  <!-- Modal login-->
-	  <div class="modal fade" id="login" role="dialog">
-	    <div class="modal-dialog">
-	    
-	      <!-- Modal content-->
-	      <div class="modal-content">
-		<div class="modal-header">
-		  <button type="button" class="close" data-dismiss="modal">×</button>
-		  <h4 class="h41"><span class="glyphicon glyphicon-user"></span> Login</h4>
+	  
+  <!--  Login  -->
+<div id="login-modal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">×</a>
+				<h3>Welcome to Minakshi Palace</h3>
+			</div>
+			<form id="loginForm" name="login" role="form">
+				<div class="modal-body">
+					<p>Sign in to your account</p>				
+					<div class="form-group">
+						<label for="email"><span class="glyphicon glyphicon-user"></span> Email</label>
+						<input type="email" name="email" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="name"><span class="glyphicon glyphicon-lock"></span> Password</label>
+						<input type="password" name="pass" class="form-control">
+					</div>	
+				        <input type="checkbox" id="vehicle1" name="vehicle1" value="rememberme">
+					<label for="vehicle1"> Remember me</label><br>
+				</div>
+				<div class="modal-footer">		
+				    <input type="submit" class="btn btn-success pull-left"id="submit"value="Login">			
+				    <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">Close</button>
+		                    <p><a href="#">Forgot password?</a><br>
+				    <p style="color:black" data-toggle="modal" data-target="#signup-modal" style="margin:10px" data-dismiss="modal">  
+    				    <a href="#">Sign Up?</a></p>				
+				</div>
+			</form>
 		</div>
-		<div class="modal-body">
-		  <form role="form">
-		    <div class="form-group">
-		      <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email Id</label>
-		      <input type="email" class="form-control" id="psw" placeholder="Enter Email Id">
-		    </div>
-		    <div class="form-group">
-		      <label for="psw"><span class="glyphicon glyphicon-lock"></span> Password</label>
-		      <input type="password" class="form-control" id="usrname" placeholder="Enter Password">
-		    </div>
-		      <button type="submit" class="btn btn-success">Login 
-		        <span class="glyphicon glyphicon-ok"></span>
-		      </button>
-		  </form>
-		</div>
-		<div class="modal-footer">
-		  <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-		    <span class="glyphicon glyphicon-remove"></span> Cancel
-		  </button>
-		  <p><a href="#">Forgot password?</a></p>
-		</div>
-	      </div>
-	      <!-- Modal content end-->
-	    </div>
-	  </div>
-	 <!-- Modal end-->
+	</div>
+</div>
+  <!-- login  end-->
 
-         <!-- Modal signup-->
-	  <div class="modal fade" id="signup" role="dialog">
-	    <div class="modal-dialog">
-	    
-	      <!-- Modal content-->
-	      <div class="modal-content">
-		<div class="modal-header"></br>
-		  <button type="button" class="close" data-dismiss="modal">×</button>
-		  <h4 class="h41"><span class="glyphicon glyphicon-user"></span> Sign Up</h4>
+  <!----signup start-->
+<div id="signup-modal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">×</a>
+				<h3>Join Minakshi Palace</h3>
+                                <div id="msg"></div>
+			</div>
+			<form id="signupForm" name="signup" role="form">
+				<div class="modal-body">
+				    <div class="form-group">
+				      <label for="fname"><span class="glyphicon glyphicon-user"></span> First Name</label>
+				      <input type="fname" class="form-control" id="name" placeholder="Enter First Name">
+				    </div>
+				    <div class="form-group">
+				      <label for="lname"><span class="glyphicon glyphicon-user"></span> Last Name</label>
+				      <input type="lname" class="form-control" id="name" placeholder="Enter Last Name">
+				    </div>	
+					<div class="form-group">
+					    <label for="checkin">Country/Region</label><br>
+					    <select class="form-control" id="country" name="country"></select>
+					</div>	
+					<div class="form-group">
+					    <label for="checkin">State</label><br>
+                                            <select class="form-control" name="state" id="state"></select>
+					</div>
+				    <div class="form-group">
+				      <label for="zipcode"><span class="glyphicon glyphicon-user"></span> Zip/Postal Code</label>
+				      <input type="zipcode" class="form-control" id="zipcode" placeholder="Enter Zip/Postal Code">
+				    </div>		
+					<div class="form-group">
+						<label for="email"><span class="glyphicon glyphicon-envelope"></span> Email</label>
+						<input type="email" name="email" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="pass"><span class="glyphicon glyphicon-lock"></span> Password</label>
+						<input type="password" name="pass" class="form-control">
+					</div>	
+					<div class="form-group">
+						<label for="con_pass"><span class="glyphicon glyphicon-lock"></span> Confirm Password</label>
+						<input type="password" name="pass" class="form-control">
+					</div>
+ 					
+					<input type="checkbox" id="vehicle1" name="vehicle1" value="rememberme">
+					<label for="vehicle1"> Remember me</label><br>
+					<input type="checkbox" id="vehicle1" name="vehicle1" value="rememberme">
+					<label for="vehicle1"> I would like to receive account updates, program news & offers via email and direct mail.</label><br>
+					<input type="checkbox" id="vehicle1" name="vehicle1" value="rememberme">
+					<label for="vehicle1"> I would like to receive exclusive offers from select third parties.</label><br>
+				        <input type="checkbox" id="vehicle1" name="vehicle1" value="rememberme">
+					<label for="vehicle1"> By signing up, I agree to Minakshi Palace's Terms of Use and Minakshi Palace Terms and Conditions. I also acknowledge Minakshi Palace's Privacy Statement located in the Privacy Center.</label><br>
+
+				</div>
+				<div class="modal-footer">		
+				    <input type="submit" class="btn btn-success pull-left"id="signupsubmit"value="Join Now">			
+				    <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">Cancel</button>
+                                    <p style="color:black" data-toggle="modal" data-target="#login-modal" style="margin:10px" data-dismiss="modal">Already have account  <a href="#">Sign In?</a>			
+				</div>
+			</form>
 		</div>
-		<div class="modal-body">
-		  <form role="form">
-		    <div class="form-group">
-		      <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email Id</label>
-		      <input type="email" class="form-control" id="usrname" placeholder="Enter Email Id">
-		    </div>
-		    <div class="form-group">
-		      <label for="psw"><span class="glyphicon glyphicon-lock"></span> Password</label>
-		      <input type="password" class="form-control" id="psw" placeholder="Enter Password">
-		    </div>
-		    <div class="form-group">
-		      <label for="conpsw"><span class="glyphicon glyphicon-lock"></span> Confirm Password</label>
-		      <input type="password" class="form-control" id="conpsw" placeholder="Enter Confirm Password">
-		    </div>
-		      <button type="submit" class="btn btn-success">Sign Up
-		        <span class="glyphicon glyphicon-ok"></span>
-		      </button>
-		  </form>
-		</div>
-		<div class="modal-footer">
-		  <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-		    <span class="glyphicon glyphicon-remove"></span> Cancel
-		  </button>
-		  <p style="color:black">Already have account <a href="#">Sign In?</a></p>
-		</div>
-	      </div>
-	      <!-- Modal content end-->
-	    </div>
-	  </div>
-	  <!-- Modal end-->
-  
+	</div>
+</div>
+  <!--signup end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<center>
-		  <h1>Heading</h1>
+		  <h1>Welcome</h1>
 		  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
 
   <div class="container bg-2">
@@ -720,11 +407,16 @@ hr.new1 {
 <div id="tour" class="bg-1">
   <div class="container">
     <h3 class="text-center">Menue Card</h3>
-    <p1 class="text-center">Lorem ipsum we'll play you some music.<br> Remember to book your tickets!</p1>
+    <p1 class="text-center">Remember to book your tables!<br> Our speciality</p1>
     <ul class="list-group">
-      <li class="list-group-item">September <span class="label label-danger">Sold Out!</span></li>
-      <li class="list-group-item">October <span class="label label-danger">Sold Out!</span></li> 
-      <li class="list-group-item">November <span class="badge">3</span></li> 
+      <li class="list-group-item">1. Goan Cuisine  <span class="label label-danger">Available Everyday!</span><span class="badge">starting from 500/-</span></li>
+      <li class="list-group-item">2. Seafoods  <span class="label label-danger">Our Speciality!</span><span class="badge">starting from 300/-</span></li> 
+      <li class="list-group-item">3. Vegan Cuisine  <span class="label label-danger">Only Monday to Friday</span><span class="badge">starting from 300/-</span></li> 
+      <li class="list-group-item">4. South Indian Cuisine  <span class="label label-danger">Only Monday to Friday</span><span class="badge">starting from 300/-</span></li> 
+      <li class="list-group-item">5. North Indian Cuisine <span class="badge">starting from 300/-</span></li> 
+      <li class="list-group-item">6. Italian Indian Cuisine <span class="badge">starting from 300/-</span></li> 
+      <li class="list-group-item">7. Mexican Indian Cuisine <span class="badge">starting from 300/-</span></li> 
+      <li class="list-group-item">8. Chinese Cuisine <span class="badge">starting from 300/-</span></li> 
     </ul>
     
     <div class="row text-center">
@@ -758,9 +450,10 @@ hr.new1 {
 
     </div>
         <!--Book table-->
-	<center><button class="btn btn-danger btn-alert"data-toggle="modal" data-target="#myModal"><h1>Book Table</h1></button></center>
+	<center><button class="btn btn-danger btn-alert" style="margin:20px" data-toggle="modal" data-target="#myModal" ><h1>Book Table</h1></button></center>
+
   </div>
-  
+
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -774,14 +467,18 @@ hr.new1 {
         <div class="modal-body">
           <form role="form">
             <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <label for="psw"><span class="glyphicon glyphicon-user"></span> Number of Guests</label>
               <input type="number" class="form-control" id="psw" placeholder="How many?">
             </div>
             <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <label for="usrname"><span class="glyphicon glyphicon-envelope"></span> Send To</label>
               <input type="text" class="form-control" id="usrname" placeholder="Enter email">
             </div>
-              <button type="submit" class="btn btn-block">Pay 
+            <div class="form-group">
+              <label for="number"><span class="glyphicon glyphicon-phone"></span> Mobile Number</label>
+              <input type="number" class="form-control" id="number" placeholder="Enter Mobile Number">
+            </div>
+              <button type="submit" class="btn btn-block btn-success">Book Table 
                 <span class="glyphicon glyphicon-ok"></span>
               </button>
           </form>
@@ -836,7 +533,7 @@ hr.new1 {
                                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
 					</br></br>
 				      </div>
-				  <button class="btn1" data-toggle="modal" data-target="#myModal">View Details</button>
+				  <button class="btn1" data-toggle="modal" data-target="#myModal">Check Rates</button>
 				</div>
 			      </div>
 
@@ -856,7 +553,7 @@ hr.new1 {
 					</br></br>
 				      </div>
 
-				  <button class="btn1" data-toggle="modal" data-target="#myModal">View Details</button>
+				  <button class="btn1" data-toggle="modal" data-target="#myModal">Check Rates</button>
 				</div>
 			      </div>
 
@@ -875,7 +572,7 @@ hr.new1 {
                                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
 					</br></br>
 				      </div>
-				  <button class="btn1" data-toggle="modal" data-target="#myModal">View Details</button>
+				  <button class="btn1" data-toggle="modal" data-target="#myModal">Check Rates</button>
 				</div>
 			      </div>
 
@@ -894,7 +591,7 @@ hr.new1 {
                                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
 					</br></br>
 				      </div>
-				  <button class="btn1" data-toggle="modal" data-target="#myModal">View Details</button>
+				  <button class="btn1" data-toggle="modal" data-target="#myModal">Check Rates</button>
 				</div>
 			      </div>
 
@@ -913,7 +610,7 @@ hr.new1 {
                                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
 					</br></br>
 				      </div>
-				  <button class="btn1" data-toggle="modal" data-target="#myModal">View Details</button>
+				  <button class="btn1" data-toggle="modal" data-target="#myModal">Check Rates</button>
 				</div>
 			      </div>
 
@@ -939,10 +636,57 @@ hr.new1 {
 	               
         </div>
 	<!--Book now-->
-	<center><button class="btn btn-danger btn-alert"data-toggle="modal" data-target="#myModal"><h1>Book Now</h1></button></center>
+	<center><button class="btn btn-danger btn-alert"data-toggle="modal" data-target="#bookroom"><h1>Book Now</h1></button></center>
 	</div>
 </div>
-
+	<!-- Modal -->
+	  <div class="modal fade" id="bookroom" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal">×</button>
+			  <h4 class="h41"><span class="glyphicon glyphicon-lock"></span> Room Booking</h4>
+			</div>
+			<div class="modal-body">
+			  <form role="form">
+			    <div class="form-group">
+			      <label for="psw"><span class="glyphicon glyphicon-user"></span> Number of Rooms</label>
+			      <input type="number" class="form-control" id="psw" placeholder="How many?">
+			    </div>
+			    <div class="form-group">
+			      <label for="psw"><span class="glyphicon glyphicon-user"></span> Type of Rooms</label>
+			      <select class="form-control" name="rates" id="rates">
+				  <option value="Low Rate">Superior Room</option>
+				  <option value="Medium Rate">Deluxe Room</option>
+				  <option value="High Rate">Business Class Room</option>
+				  <option value="High Rate">Suite</option>
+				  <option value="High Rate">One-bedroom Suite</option>
+			      </select>
+			    </div>
+			    <div class="form-group">
+			      <label for="usrname"><span class="glyphicon glyphicon-envelope"></span> Send To</label>
+			      <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+			    </div>
+			    <div class="form-group">
+			      <label for="number"><span class="glyphicon glyphicon-phone"></span> Mobile Number</label>
+			      <input type="text" class="form-control" id="number" placeholder="Enter Mobile Number">
+			    </div>
+			      <button type="submit" class="btn btn-block btn-success">Book Room 
+				<span class="glyphicon glyphicon-ok"></span>
+			      </button>
+			  </form>
+			</div>
+			<div class="modal-footer">
+			  <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+			    <span class="glyphicon glyphicon-remove"></span> Cancel
+			  </button>
+			  <p>Need <a href="#">help?</a></p>
+			</div>
+	      </div>
+	    </div>
+	  </div>
 
 
 
@@ -1288,17 +1032,20 @@ hr.new1 {
   <div class="row">
     <div class="col-sm-4 slideanim">
       <h3>Contact Hotels</h3>
-      <p><img src="imgs/icons8-phone-100.png" style="height:4%; width:4%;"> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-earphone"aria-hidden="true" style="margin:5px;"></span>+00 1515151515</p>
+      <p><span class="glyphicon glyphicon-earphone"aria-hidden="true" style="margin:5px;"></span>+00 1515151515</p>
+      <p><span class="glyphicon glyphicon-earphone"aria-hidden="true" style="margin:5px;"></span>+00 1515151515</p>
+      <!--<p><img src="imgs/icons8-phone-100.png" style="height:4%; width:4%;"> +00 1515151515</p>-->
       <button class="btn btn-danger">Need Help?</button>
     </div>
     <div class="col-sm-4 slideanim">
       <h3>Follow us on social media </h3>
       <div class="row">
-          <img src="imgs/twitter.webp"width="20px"height="20px">
-        <img src="imgs/linkedin.webp"width="20px"height="20px">
-        <img src="imgs/insta.webp"width="20px"height="20px">
-        <img src="imgs/facebook.webp"width="20px"height="20px">
-        <img src="imgs/whatsapp.webp"width="20px"height="20px"></br></br>
+          <img src="imgs/twitter.webp"style="width:30px; height:30px; margin:5px;">
+        <img src="imgs/linkedin.webp"style="width:30px; height:30px; margin:5px;">
+        <img src="imgs/insta.webp"style="width:30px; height:30px; margin:5px;">
+        <img src="imgs/facebook.webp"style="width:30px; height:30px; margin:5px;">
+        <img src="imgs/whatsapp.webp"style="width:30px; height:30px; margin:5px;"></br></br>
       </div>
     </div>
     <div class="col-sm-4 slideanim">
@@ -1316,203 +1063,19 @@ hr.new1 {
      </form>
      <center>
     </div>
-  <div>
+  </div>
+  <div class="row">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
   <p>The Minakshi Palace <a href="" title="Visit us">Welcome</a></p>
+  </div>
 </footer>
 
-<script>
-$(document).ready(function(){
-  
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-
-  // added align model center
-
-      function alignModal(){
-
-        var modalDialog = $(this).find(".modal-dialog");
-
-        // Applying the top margin on modal dialog to align it vertically center 
-
-        modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
-
-    }
-
-    // Align modal when it is displayed
-
-    $(".modal").on("shown.bs.modal", alignModal);
-
-    // Align modal when user resize the window
-
-    $(window).on("resize", function(){
-
-        $(".modal:visible").each(alignModal);
-
-    }); 
-
-
-
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-
-	/***************************** try ************************/
-
-
-    var itemsMainDiv = ('.MultiCarousel');
-    var itemsDiv = ('.MultiCarousel-inner');
-    var itemWidth = "";
-
-    $('.leftLst, .rightLst').click(function () {
-        var condition = $(this).hasClass("leftLst");
-        if (condition)
-            click(0, this);
-        else
-            click(1, this)
-    });
-
-    ResCarouselSize();
-
-
-
-
-    $(window).resize(function () {
-        ResCarouselSize();
-    });
-
-    //this function define the size of the items
-    function ResCarouselSize() {
-        var incno = 0;
-        var dataItems = ("data-items");
-        var itemClass = ('.item');
-        var id = 0;
-        var btnParentSb = '';
-        var itemsSplit = '';
-        var sampwidth = $(itemsMainDiv).width();
-        var bodyWidth = $('body').width();
-        $(itemsDiv).each(function () {
-            id = id + 1;
-            var itemNumbers = $(this).find(itemClass).length;
-            btnParentSb = $(this).parent().attr(dataItems);
-            itemsSplit = btnParentSb.split(',');
-            $(this).parent().attr("id", "MultiCarousel" + id);
-
-
-            if (bodyWidth >= 1200) {
-                incno = itemsSplit[3];
-                itemWidth = sampwidth / incno;
-            }
-            else if (bodyWidth >= 992) {
-                incno = itemsSplit[2];
-                itemWidth = sampwidth / incno;
-            }
-            else if (bodyWidth >= 768) {
-                incno = itemsSplit[1];
-                itemWidth = sampwidth / incno;
-            }
-            else {
-                incno = itemsSplit[0];
-                itemWidth = sampwidth / incno;
-            }
-            $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
-            $(this).find(itemClass).each(function () {
-                $(this).outerWidth(itemWidth);
-            });
-
-            $(".leftLst").addClass("over");
-            $(".rightLst").removeClass("over");
-
-        });
-    }
-
-
-    //this function used to move the items
-    function ResCarousel(e, el, s) {
-        var leftBtn = ('.leftLst');
-        var rightBtn = ('.rightLst');
-        var translateXval = '';
-        var divStyle = $(el + ' ' + itemsDiv).css('transform');
-        var values = divStyle.match(/-?[\d\.]+/g);
-        var xds = Math.abs(values[4]);
-        if (e == 0) {
-            translateXval = parseInt(xds) - parseInt(itemWidth * s);
-            $(el + ' ' + rightBtn).removeClass("over");
-
-            if (translateXval <= itemWidth / 2) {
-                translateXval = 0;
-                $(el + ' ' + leftBtn).addClass("over");
-            }
-        }
-        else if (e == 1) {
-            var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
-            translateXval = parseInt(xds) + parseInt(itemWidth * s);
-            $(el + ' ' + leftBtn).removeClass("over");
-
-            if (translateXval >= itemsCondition - itemWidth / 2) {
-                translateXval = itemsCondition;
-                $(el + ' ' + rightBtn).addClass("over");
-            }
-        }
-        $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
-    }
-
-    //It is used to get some elements from btn
-    function click(ell, ee) {
-        var Parent = "#" + $(ee).parent().attr("id");
-        var slide = $(Parent).attr("data-slide");
-        ResCarousel(ell, Parent, slide);
-    }
-
-   $('[data-toggle="tooltip"]').tooltip();   
-
-
-})
-function viewmoreFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
-    moreText.style.display = "inline";
-  }
-}
-
+<script language="javascript">
+	populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+	populateCountries("country2");
+	populateCountries("country2");
 </script>
 
 </body>
