@@ -174,24 +174,47 @@ $(document).ready(function(){
 			return false;
 		});
 */
-$("#contactForm").submit(function(event){
-		submitForm();
-		return false;
-	});
+		$("#loginForm").submit(function(event){
+				submitForm();
+				return false;
+			});
+		$("#signupForm").submit(function(event){
+				signupForm();
+				return false;
+			});
 
 });// document.ready end
+
+
+//list of country
 
 
 
 function submitForm(){
 	 $.ajax({
 		type: "POST",
-		url: "data.php",
+		url: "login.php",
 		cache:false,
-		data: $('form#contactForm').serialize(),
+		data: $('form#loginForm').serialize(),
 		success: function(response){
-			$("#contact").html(response)
-			$("#contact-modal").modal('hide');
+			$("#login").html(response)
+			$("#login-modal").modal('hide');
+		},
+		error: function(){
+			alert("Error");
+		}
+	});
+}
+
+function signupForm(){
+	 $.ajax({
+		type: "POST",
+		url: "signup.php",
+		cache:false,
+		data: $('form#signupForm').serialize(),
+		success: function(response){
+			$("#signup").html(response)
+			$("#signup-modal").modal('hide');
 		},
 		error: function(){
 			alert("Error");
@@ -275,3 +298,5 @@ function loginForm(){
         });
     }
 }*/
+
+
